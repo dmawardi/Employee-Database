@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Employee Database</title>
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron jumbotron">
+            <div class="container">
+                <h1 class="display-4">Employee Data Management</h1>
+                <p class="lead">A comprehensive Directory of Employee Billable Hours
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                Featured
+            </div>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Employee Name</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Start Date</th>
+                        <th scope="col">Months Worked</th>
+                        <th scope="col">Monthly Rate</th>
+                        <th scope="col">Total Billed</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody id="tableData">
+                </tbody>
+            </table>
+        </div>
+        <div class="card" id="submissionForm">
+            <div class="card-header">
+                Add Employee
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="nameInput">Employee Name</label>
+                    <input type="text" class="form-control" id="nameInput" placeholder="Your Name">
+                    <label for="roleInput">Role</label>
+                    <input type="text" class="form-control" id="roleInput" placeholder="Your Role">
+                    <label for="dateInput">Start Date (MM/DD/YYYY)</label>
+                    <input type="date" class="form-control" id="dateInput" placeholder="MM/DD/YYYY">
+                    <label for="rateInput">Monthly Rate</label>
+                    <input type="number" class="form-control" id="rateInput" placeholder="Monthly Rate">
+                </div>
+                <button type="button" class="btn btn-primary" id="submitButton">Submit</button>
+
+            </form>
+
+        </div>
+
+
+
+    </div>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-database.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCnDefhLLKDJv5pUBr7FN4-FGASb13-3m0",
+            authDomain: "project-2-4051e.firebaseapp.com",
+            databaseURL: "https://project-2-4051e.firebaseio.com",
+            projectId: "project-2-4051e",
+            storageBucket: "",
+            messagingSenderId: "161199308928",
+            appId: "1:161199308928:web:29c3bb574806a01f"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <!-- Moment JS -->
+    <script type="text/javascript" src="moment.js"></script>
+
+
+
+
+    <script type="text/javascript" src="app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+body {
+    /* background: black; */
+}
+
+div.form-group label {
+    padding-top: 8px;
+}
+
+#submissionForm {
+    margin-top: 15px;
+}
+
+#submitButton {
+    float: right;
+    margin: 10px 10px;
+}
+
+.card {
+    margin: 20px 0;
+}
+
+label {
+    margin-left: 15px;
+}
